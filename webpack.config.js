@@ -62,7 +62,7 @@ module.exports = {
             {
                 // 小于1KB的图片使用base64内联
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'url-loader?limit=1024&name=./images/[name]_[hash].[ext]' // 图片提取到images目录
+                loader: 'url-loader?limit=1024&name=./images/[name].[hash].[ext]' // 图片提取到images目录
             }
         ]
     },
