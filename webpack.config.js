@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // HTML生成插件
 module.exports = {
     // 单页应用入口
     entry: {
-        index: './index.js'
+        index: './src/index.js'
     },
 
     // 编译输出配置
@@ -25,17 +25,6 @@ module.exports = {
     // 模块配置
     module: {
         rules: [
-            // js语法检测
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                enforce: "pre",
-                use: [
-                    {
-                        loader: "jshint-loader"
-                    }
-                ]
-            },
             // es6语法转换
             {
                 test: /\.js$/,
@@ -62,7 +51,7 @@ module.exports = {
             {
                 // 小于1KB的图片使用base64内联
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'url-loader?limit=1024&name=./images/[name].[hash].[ext]' // 图片提取到images目录
+                loader: 'url-loader?limit=1024&name=./image/[name].[hash].[ext]' // 图片提取到images目录
             }
         ]
     },
@@ -76,8 +65,8 @@ module.exports = {
             title: '',
             filename : 'index.html',
             inject: 'body', // bundle.[js|css]注入到body部分
-            template: 'index-template.html', // 基于模板文件生成
+            template: './src/index.html', // 基于模板文件生成
             chunks: ['index'] // entry中定义的入口chunk
         }),
-    ]
+    ],
 };
