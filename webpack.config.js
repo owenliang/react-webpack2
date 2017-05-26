@@ -1,4 +1,5 @@
 const path = require("path"); // 处理文件路径的标准库
+const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin"); // CSS提取插件
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // HTML生成插件
 
@@ -68,5 +69,10 @@ module.exports = {
             template: './src/index.html', // 基于模板文件生成
             chunks: ['index'] // entry中定义的入口chunk
         }),
+        // 自动加载类库
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+        })
     ],
 };

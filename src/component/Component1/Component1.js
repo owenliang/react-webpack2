@@ -40,11 +40,16 @@ class Component1 extends React.Component {
 
     }
 
+    backoff(event) {
+        this.props.history.goBack();
+    }
+
     render() {
         return (
             <div>
                 <h1>Component1</h1>
                 <p>进入次数：{this.props.counter}</p>
+                <a href="javascript:void(0)" onClick={this.backoff.bind(this)}>后退</a>
             </div>
         );
     }
