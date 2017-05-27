@@ -35,8 +35,8 @@ export default class Container extends React.Component {
                             transitionName={`routeChange-${direction}`}
                             component="div"
                             className="routerChangeContainer"
-                            transitionEnterTimeout={400}
-                            transitionLeaveTimeout={400}
+                            transitionEnterTimeout={300}
+                            transitionLeaveTimeout={300}
                         >
                             <div key={location.pathname} className="routerComponentContainer" style={componentStyle}>
                                 <Route location={location} exact path="/" component={Component0} />
