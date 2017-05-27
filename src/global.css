@@ -1,0 +1,72 @@
+:global(*) {
+    margin: 0;
+    padding: 0;
+}
+:global(.routerChangeContainer) {
+    position: relative;
+}
+:global(.routerComponentContainer) {
+    background-color: white;
+}
+:global(.routeChange-back-leave) {
+    -webkit-transform: translateX(0px) translateZ(0px);
+    -moz-transform: translateX(0px) translateZ(0px);
+    -ms-transform: translateX(0px) translateZ(0px);
+    -o-transform: translateX(0px) translateZ(0px);
+    transform: translateX(0px) translateZ(0px);
+    position: absolute;
+    width : 100%;
+    top:0;
+    left:0;
+    z-index: 10000;
+}
+:global(.routeChange-back-leave.routeChange-back-leave-active) {
+    -webkit-transform: translateX(100%) translateZ(0px);
+    -moz-transform: translateX(100%) translateZ(0px);
+    -ms-transform: translateX(100%) translateZ(0px);
+    -o-transform: translateX(100%) translateZ(0px);
+    transform: translateX(100%) translateZ(0px);
+
+    -webkit-transition: transform 400ms ease-out;
+    -moz-transition: transform 400ms ease-out;
+    -ms-transition: transform 400ms ease-out;
+    -o-transition: transform 400ms ease-out;
+    transition: transform 400ms ease-out;
+}
+:global(.routeChange-back-enter) {
+    opacity: 0;
+}
+:global(.routeChange-back-enter.routeChange-back-enter-active) {
+    opacity: 1;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    -ms-transition: opacity 400ms ease-in;
+    -o-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+:global(.routeChange-forward-enter) {
+    -webkit-transform: translateX(100%) translateZ(0px);
+    -moz-transform: translateX(100%) translateZ(0px);
+    -ms-transform: translateX(100%) translateZ(0px);
+    -o-transform: translateX(100%) translateZ(0px);
+    transform: translateX(100%) translateZ(0px);
+    position: absolute;
+    width : 100%;
+    top:0;
+    left:0;
+    z-index: 10000;
+}
+:global(.routeChange-forward-enter.routeChange-forward-enter-active) {
+    -webkit-transform: translateX(0px) translateZ(0px);
+    -moz-transform: translateX(0px) translateZ(0px);
+    -ms-transform: translateX(0px) translateZ(0px);
+    -o-transform: translateX(0px) translateZ(0px);
+    transform: translateX(0px) translateZ(0px);
+
+    -webkit-transition: transform 400ms ease-out;
+    -moz-transition: transform 400ms ease-out;
+    -ms-transition: transform 400ms ease-out;
+    -o-transition: transform 400ms ease-out;
+    transition: transform 400ms ease-out;
+}

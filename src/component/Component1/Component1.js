@@ -8,8 +8,8 @@ import { connect } from 'react-redux'
 import * as actions from '../../action/Component1';
 
 class Component1 extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
     }
 
     componentWillMount() {
@@ -37,7 +37,6 @@ class Component1 extends React.Component {
     }
 
     componentWillUnmount() {
-
     }
 
     backoff(event) {

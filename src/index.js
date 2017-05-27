@@ -26,6 +26,9 @@ const store = createStore(
     ),
 );
 
+// global css
+import "./global.css";
+
 // 渲染
 ReactDOM.render(
     (

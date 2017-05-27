@@ -17,8 +17,8 @@ import style from "./Component0.css";
 import image from "./china.png";
 
 class Component0 extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
     }
 
     componentWillMount() {

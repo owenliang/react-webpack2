@@ -8,8 +8,8 @@ import { connect } from 'react-redux'
 import * as actions from '../../action/Component2';
 
 class Component2 extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
     }
 
     componentWillMount() {
