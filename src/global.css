@@ -14,7 +14,7 @@
     -ms-transform: translateX(0px) translateZ(0px);
     -o-transform: translateX(0px) translateZ(0px);
     transform: translateX(0px) translateZ(0px);
-    position: absolute;
+    position: fixed;
     width : 100%;
     top:0;
     left:0;
@@ -51,7 +51,7 @@
     -ms-transform: translateX(100%) translateZ(0px);
     -o-transform: translateX(100%) translateZ(0px);
     transform: translateX(100%) translateZ(0px);
-    position: absolute;
+    position: fixed;
     width : 100%;
     top:0;
     left:0;

@@ -10,14 +10,11 @@ import {Link} from 'react-router-dom';
 // action
 import * as actions from '../../action/Component0';
 
-// css
-import style from "./Component0.css";
-
 // image
 import image from "./china.png";
 
-// child component
-import Toolbar from "../Toolbar/ToolBar";
+// other component
+import ComponentWithToolbar from "../ComponentWithToolbar/ComponentWithToolbar";
 
 class Component0 extends React.Component {
     constructor(props) {
@@ -57,14 +54,12 @@ class Component0 extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1 className={style.title}>Component0</h1>
+            <ComponentWithToolbar componentName="component0">
                 <img src={image} />
                 <h1 ref="stayInfo">停留时间：{this.props.stay}</h1>
                 <p><Link to="/component1">访问Component1</Link></p>
                 <p><Link to="/component2">访问Component2</Link></p>
-                <Toolbar></Toolbar>
-            </div>
+            </ComponentWithToolbar>
         );
     }
 }

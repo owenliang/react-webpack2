@@ -1,3 +1,19 @@
+.componentWithToolBar {
+    /* leave space for bottom toolbar */
+    padding-bottom: 40px;
+}
+.componentName {
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+.topPlaceholder {
+    height: 50px;
+    border-bottom: 1px solid #eee;
+}
 .toolBarContainer {
     position: fixed;
     bottom: 0px;

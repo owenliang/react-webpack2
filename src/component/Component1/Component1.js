@@ -7,8 +7,8 @@ import { connect } from 'react-redux'
 // action
 import * as actions from '../../action/Component1';
 
-// child component
-import Toolbar from "../Toolbar/ToolBar";
+// other component
+import ComponentWithToolbar from "../ComponentWithToolbar/ComponentWithToolbar";
 
 class Component1 extends React.Component {
     constructor(props) {
@@ -48,12 +48,10 @@ class Component1 extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Component1</h1>
+            <ComponentWithToolbar componentName="component1">
                 <p>进入次数：{this.props.counter}</p>
                 <a href="javascript:void(0)" onClick={this.backoff.bind(this)}>后退</a>
-                <Toolbar></Toolbar>
-            </div>
+            </ComponentWithToolbar>
         );
     }
 }

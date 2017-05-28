@@ -1,12 +1,12 @@
 import React from "react";
 
 // css
-import style from "./Toolbar.css";
+import style from "./ComponentWithToolbar.css";
 
 // image
 import refreshImg from "./refresh.svg";
 
-export default class ToolBar extends React.Component {
+export default class ComponentWithToolbar extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -44,7 +44,10 @@ export default class ToolBar extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={style.componentWithToolBar}>
+                <div className={style.componentName}>{this.props.componentName}</div>
+                <div className={style.topPlaceholder}></div>
+                {this.props.children}
                 <ul className={style.toolBarContainer}>
                     <li>
                         <img src={refreshImg} onClick={this.refreshBrowser.bind(this)}></img>
