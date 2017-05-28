@@ -1,0 +1,26 @@
+.toolBarContainer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #eee;
+}
+.toolBarContainer:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+.toolBarContainer li {
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    list-style: none;
+}
+.toolBarContainer li img {
+    display: block;
+    margin: 7px 7px;
+    height: 26px;
+    width: 26px;
+}

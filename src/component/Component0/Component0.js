@@ -16,6 +16,9 @@ import style from "./Component0.css";
 // image
 import image from "./china.png";
 
+// child component
+import Toolbar from "../Toolbar/ToolBar";
+
 class Component0 extends React.Component {
     constructor(props) {
         super(props);
@@ -60,6 +63,7 @@ class Component0 extends React.Component {
                 <h1 ref="stayInfo">停留时间：{this.props.stay}</h1>
                 <p><Link to="/component1">访问Component1</Link></p>
                 <p><Link to="/component2">访问Component2</Link></p>
+                <Toolbar></Toolbar>
             </div>
         );
     }
