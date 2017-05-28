@@ -19,6 +19,14 @@ const history = createHistory();
 export default class Container extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            windowHeight: $(window).height()
+        };
+        $(window).resize(() => {
+            this.setState({
+                windowHeight: $(window).height(),
+            });
+        });
     }
 
     render() {
@@ -28,7 +36,7 @@ export default class Container extends React.Component {
                     const location = props.location;
                     const direction = props.history.action == 'POP' ? 'back' : 'forward';
                     const componentStyle = {
-                       minHeight : $(window).height(),
+                       minHeight : this.state.windowHeight + "px"
                     };
                     return(
                         <CSSTransitionGroup
